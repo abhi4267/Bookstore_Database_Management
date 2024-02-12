@@ -1,0 +1,21 @@
+INSERT INTO Authors (author_id, author_name) VALUES
+    (1, 'Author 1'),
+    (2, 'Author 2');
+
+INSERT INTO Books (book_id, title, author_id, genre, price, stock_quantity) VALUES
+    (1, 'Book 1', 1, 'Fiction', 19.99, 100),
+    (2, 'Book 2', 1, 'Non-Fiction', 29.99, 50),
+    (3, 'Book 3', 2, 'Mystery', 24.99, 75);
+
+INSERT INTO Customers (customer_id, customer_name, email, address) VALUES
+    (1, 'Customer 1', 'customer1@example.com', '123 Main St'),
+    (2, 'Customer 2', 'customer2@example.com', '456 Oak Ave');
+
+INSERT INTO Orders (order_id, customer_id, order_date) VALUES
+    (1, 1, '2024-02-01'),
+    (2, 2, '2024-02-03');
+
+INSERT INTO OrderDetails (order_detail_id, order_id, book_id, quantity, price) VALUES
+    (1, 1, 1, 2, 39.98),
+    (2, 1, 2, 1, 29.99),
+    (3, 2, 3, 3, 74.97);
