@@ -1,0 +1,7 @@
+SELECT b.title, a.author_name, SUM(od.quantity) AS total_sold
+FROM Books b
+JOIN Authors a ON b.author_id = a.author_id
+JOIN OrderDetails od ON b.book_id = od.book_id
+GROUP BY b.book_id
+ORDER BY total_sold DESC
+LIMIT 10;
